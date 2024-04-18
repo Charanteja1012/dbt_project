@@ -1,0 +1,6 @@
+sources:
+  - name: commerceservice
+    database: zono_digital_airbyte
+    schema: commerceservice
+    tables:
+      - name: order

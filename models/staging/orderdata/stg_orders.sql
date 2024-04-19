@@ -1,7 +1,9 @@
 WITH source AS (
-    SELECT state, createdAt
+    SELECT state, createdAt,orderPlacedAt
     FROM {{ source('commerceservice', 'order') }} 
-    WHERE createdAt > CURRENT_TIMESTAMP - INTERVAL '1 hour'
+    WHERE createdAt BETWEEN DATE_TRUNC('day', CURRENT_TIMESTAMP) - INTERVAL '1 day' AND DATE_TRUNC('day', CURRENT_TIMESTAMP)
 )
 
-select * from source
+SELECT * FROM source
+
+

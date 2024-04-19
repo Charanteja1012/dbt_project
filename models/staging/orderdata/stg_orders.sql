@@ -1,7 +1,7 @@
 WITH source AS (
     SELECT state, createdAt
     FROM {{ source('commerceservice', 'order') }} 
-    WHERE createdAt > DATEADD(DAY, -2, GETDATE())
+    WHERE createdAt > CURRENT_TIMESTAMP - INTERVAL '1 hour'
 )
 
 select * from source

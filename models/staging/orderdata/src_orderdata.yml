@@ -4,3 +4,10 @@ sources:
     schema: commerceservice
     tables:
       - name: order
+    
+  - name: zonocloud
+    database: zono_digital_airbyte
+    schema: zonocloud
+    tables:
+      - name: invite
+      - name: workspacemembers

@@ -1,9 +1,10 @@
 WITH source AS (
-    SELECT state, createdAt,orderPlacedAt
-    FROM {{ source('commerceservice', 'order') }} 
-    WHERE createdAt BETWEEN DATE_TRUNC('day', CURRENT_TIMESTAMP) - INTERVAL '1 day' AND DATE_TRUNC('day', CURRENT_TIMESTAMP)
+    SELECT state, createdAt
+    FROM {{ source('commerceservice', 'order') }}
+    WHERE DATE(createdAt) = CURRENT_DATE
 )
 
-SELECT * FROM source
+
+select * from source
 
 

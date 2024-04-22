@@ -34,9 +34,8 @@ models:
   commerceservice:
     marts:
       core:
-        +materialized: table
-        +overwrite: true
+        +materialized: table      
     staging:
-      +materialized: view   
-      +overwrite: true
+      +materialized: view
+     
       

@@ -1,0 +1,14 @@
+models:
+  - name: stg_commerceservice__orders
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not null
+  - name: 
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not null
+

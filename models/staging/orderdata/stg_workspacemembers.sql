@@ -1,1 +1,0 @@
-select workspaceId,userId from {{ source('zonocloud', 'workspacemembers')}} 

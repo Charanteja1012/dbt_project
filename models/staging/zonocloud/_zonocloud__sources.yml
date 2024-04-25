@@ -1,0 +1,14 @@
+sources:
+  - name: zonocloud
+    database: zono_digital_airbyte
+    schema: zonocloud
+    tables:
+      - name: invite
+      - name: workspacemembers
+      - name: fulfillmentlocation
+      - name: state
+      - name: invoices
+      - name: invitedetails
+      - name: paymenttransaction
+      - name: teamcustomer
+
